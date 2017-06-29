@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import FaqPage from './pages/FaqPage';
+import ContactPage from './pages/ContactPage';
 
 class App extends Component {
   render() {
@@ -13,40 +22,44 @@ class App extends Component {
                   <Link to='/contact'>Contact</Link>
               </nav>
 
-              <Route exact path='/' render={
-                  () => (
-                    <div>Home Page</div>
-                  )
-                }
-              />
+              <Switch>
+                  <Route exact path='/' render={
+                      () => (
+                        <HomePage />
+                      )
+                    }
+                  />
 
-              <Route path='/about' render={
-                  () => (
-                    <div>About Page</div>
-                  )
-                }
-              />
+                  <Route path='/about' render={
+                      () => (
+                        <AboutPage />
+                      )
+                    }
+                  />
 
-              <Route path='/faq' render={
-                  () => (
-                    <div>FAQ Page</div>
-                  )
-                }
-              />
+                  <Route path='/faq' render={
+                      () => (
+                        <FaqPage />
+                      )
+                    }
+                  />
 
-              <Route path='/contact' render={
-                  () => (
-                    <div>Contact Page</div>
-                  )
-                }
-              />
+                  <Route path='/contact' render={
+                      () => (
+                        <ContactPage />
+                      )
+                    }
+                  />
 
+                  <Route render={
+                      ({ location }) => (
+                        <h1>{ location.pathname } Not Found</h1>
+                      )
+                    }
+                  />
+              </Switch>
           </main>
       </Router>
-
-
-
-
     );
   }
 }
