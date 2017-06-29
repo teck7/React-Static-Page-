@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Switch
 } from 'react-router-dom';
+import NavMenu from './components/NavMenu'
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import FaqPage from './pages/FaqPage';
@@ -15,13 +15,7 @@ class App extends Component {
     return (
       <Router>
           <main>
-              <nav>
-                  <Link to='/'>Home</Link>
-                  <Link to='/about'>About</Link>
-                  <Link to='/faq'>Faq</Link>
-                  <Link to='/contact'>Contact</Link>
-              </nav>
-
+              <NavMenu />
               <Switch>
                   <Route exact path='/' render={
                       () => (
