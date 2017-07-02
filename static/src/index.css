@@ -569,12 +569,12 @@ div.well.well-lg {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 600px;
+    max-height: 800px;
 }
 
 div.panel-body {
   width: 95%;
-  height: 450px;
+  max-height: 650px;
 }
 
 .form-header {
@@ -655,12 +655,27 @@ button.btn.btn-link:focus {
 
 @media screen and (max-width: 767px){
   div.well.well-lg {
-      height: 650px;
+      max-height: 850px;
   }
 
   div.panel-body {
     width: 100%;
-    height: 480px;
+    max-height: 720px;
+  }
+
+  div.formErrors > p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 565px){
+  div.well.well-lg {
+      max-height: 900px;
+  }
+
+  div.panel-body {
+    width: 100%;
+    max-height: 760px;
   }
 }
 
@@ -668,11 +683,19 @@ button.btn.btn-link:focus {
     .form-header {
         font-size: 25px;
     }
+
+    div.formErrors > p {
+      font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 320px){
     .form-header {
         font-size: 23px;
+    }
+
+    div.formErrors > p {
+      font-size: 10px;
     }
 }
 
@@ -706,17 +729,20 @@ div.background-caption-home {
 }
 
 img.vacl-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+    margin: 0 auto;
 }
 
 h1.home-heading-text {
     color: #353535;
     font-weight: 700;
-    font-size: 45px;
-    margin-bottom: 20px;
+    font-size: 65px;
+    letter-spacing: 3px;
+    word-spacing: 11px;
+    margin-bottom: 80px;
+}
+
+img.boom-img {
+    margin: 0 auto;
 }
 
 div.button-container {
@@ -758,30 +784,33 @@ a.sign-in-link {
 
 a.sign-in-link:hover,
 a.sign-in-link:focus {
-   color: #5A1111;
+   color: #73BF45;
 }
 
 /*Media Query Settings for Home Section 1*/
 @media screen and (max-width: 600px){
   img.background-home {
-     height: 800px;
+     height: 850px;
   }
 
   div.background-caption-home {
-      margin-top: -760px;
-      z-index: 10;
+      margin-top: -830px;
   }
 
   img.vacl-logo {
-    margin-bottom: 40px;
+    margin-bottom: 5px;
   }
 
   h1.home-heading-text {
       font-size: 35px;
   }
 
+  img.boom-img {
+      margin-top: -85px;
+  }
+
   div.button-container {
-    margin-top: 120px;
+    margin-top: 30px;
   }
 
   button.learn-now-button {
@@ -791,8 +820,16 @@ a.sign-in-link:focus {
 }
 
 @media screen and (max-width: 500px){
-  div.button-container {
-    margin-left: -20px;
+  img.background-home {
+     height: 820px;
+  }
+
+  div.background-caption-home {
+      margin-top: -780px;
+  }
+
+  img.boom-img {
+      margin-top: -35px;
   }
 
   button.learn-now-button {
@@ -801,9 +838,29 @@ a.sign-in-link:focus {
   }
 }
 
+@media screen and (max-width: 400px){
+  img.background-home {
+     height: 800px;
+  }
+
+  div.background-caption-home {
+      margin-top: -800px;
+  }
+
+}
+
 @media screen and (max-width: 300px){
-  div.button-container {
-    margin-left: -35px;
+  img.background-home {
+     height: 650px;
+  }
+
+  div.background-caption-home {
+      margin-top: -630px;
+  }
+
+  button.learn-now-button {
+    font-size: 20px;
+    padding: 10px 20px;
   }
 }
 

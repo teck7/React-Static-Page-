@@ -4,7 +4,6 @@ import { FormErrors } from './FormErrors';
 import SingleInput from './SingleInput';
 import TextArea from './TextArea';
 
-
 class ContactForm extends React.Component {
 
   constructor(props) {
