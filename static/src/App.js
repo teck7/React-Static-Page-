@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom';
-import NavMenu from './components/NavMenu'
+import NavMenu from './components/NavMenu';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import FaqPage from './pages/FaqPage';

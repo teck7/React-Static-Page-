@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "npmdoc-react-fontawesome": "^0.0.2",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
     "react-bootstrap": "4.0.0-alpha.6",
+    "react-collapsible": "^1.4.0",
     "react-dom": "^15.6.1",
+    "react-google-maps": "^6.3.0",
     "react-router-dom": "^4.1.1",
     "react-scripts": "1.0.8",
     "reactstrap": "^4.8.0"
