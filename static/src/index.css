@@ -29,27 +29,32 @@ main {
   text-decoration: none;
 }
 
-li.nav-link > a > a {
+div.navbar-collapse.collapse {
+  float: right;
+  padding-top: 8px;
+}
+
+div.navbar-collapse.collapse > a {
   font-size: 25px;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 15px;
 }
 
-li.nav-link > a > a:hover {
+div.navbar-collapse.collapse > a:hover {
   text-decoration: none;
   color: #F4DA9D;
-  padding-bottom: 15px;
+  padding-bottom: 14px;
   border-bottom: 4px solid #F4DA9D;
 }
 
-li.nav-link > a > a.selected {
+div.navbar-collapse.collapse > a.selected {
   font-weight: 900;
   color: #F4DA9D;
   text-decoration: none;
   background-color:rgba(240, 240, 245, 0.1);
-  padding-top: 16px;
-  padding-bottom: 15px;
+  padding-bottom: 14px;
   border-bottom: 4px solid #F4DA9D;
 }
 
@@ -58,25 +63,6 @@ li.nav-link > a > a.selected {
   .navbar-header {
       padding-bottom: 0px;
       border-bottom: 1px solid #353535;
-  }
-
-  div.navbar-collapse.collapse.in {
-      border-top: 1px solid #353535;
-  }
-
-   a.navbar-brand {
-    color: white;
-  }
-
-  li.nav-link {
-    background-color:#353535;
-    margin: -8px -15px 0px -15px;
-  }
-
-  li.nav-link > a > a {
-    display: block;
-    padding-top: 15px;
-    padding-bottom: 20px;
   }
 
   button.navbar-toggle:hover,
@@ -93,7 +79,80 @@ li.nav-link > a > a.selected {
   span.icon-bar {
     border: 1px solid white;
   }
+
+  div.navbar-collapse.collapse.in {
+      margin-top: 5px;
+      border-top: 1px solid #353535;
+  }
+
+   a.navbar-brand {
+    color: white;
+  }
+
+  div.navbar-collapse.collapse {
+    background-color:#353535;
+    margin: 0px -15px 0px -15px;
+  }
+
+  div.navbar-collapse.collapsing {
+    display: none;
+  }
+
+  div.navbar-collapse.collapse.in > a {
+    float: left;
+    display: block;
+    padding-right: 400px;
+    width: 300px;
+  }
+
+  div.navbar-collapse.collapse > a:hover {
+    text-decoration: none;
+    color: #F4DA9D;
+  }
+
+  div.navbar-collapse.collapse > a.selected {
+    color: #F4DA9D;
+    text-decoration: none;
+    background-color: #353535;
+    border-bottom: none;
+  }
+
+  div.navbar-collapse.collapse > a {
+    padding-top: 10px;
+    padding-bottom: 13px;
+  }
 }
+
+@media screen and (max-width: 420px){
+  div.navbar-collapse.collapse > a {
+    margin-right: -80px;
+  }
+}
+
+@media screen and (max-width: 340px){
+  div.navbar-collapse.collapse > a {
+    margin-right: -100px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  div.navbar-collapse.collapse > a {
+    margin-right: -120px;
+  }
+}
+
+@media screen and (max-width: 300px){
+  div.navbar-collapse.collapse > a {
+    margin-right: -140px;
+  }
+}
+
+@media screen and (max-width: 280px){
+  div.navbar-collapse.collapse > a {
+    margin-right: -160px;
+  }
+}
+
 /*------------------------End of NavMenu Component----------------------------*/
 
 
